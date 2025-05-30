@@ -1,0 +1,4 @@
+C:\Users\NCAWSA\Downloads\Pokecity-main\obj\Debug\net8.0\Pokecity-main.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\NCAWSA\Downloads\Pokecity-main\obj\Debug\net8.0\Pokecity-main.AssemblyInfoInputs.cache
+C:\Users\NCAWSA\Downloads\Pokecity-main\obj\Debug\net8.0\Pokecity-main.AssemblyInfo.cs
+C:\Users\NCAWSA\Downloads\Pokecity-main\obj\Debug\net8.0\Pokecity-main.csproj.CoreCompileInputs.cache
