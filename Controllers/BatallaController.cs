@@ -1,48 +1,53 @@
-using System.ComponentModel.Design;
 using Pokecity.Models;
+using Pokecity.Views;
+using System;
+using System.Collections.Generic;
+
 namespace Pokecity.Controllers
 {
-    public class BatallaControllers
+    public class BatallaController
     {
-        private Entrenador jugador;
-        private Batalla batallaActual;
-        private List<Pokemon> pokemonesDisponibles;
+        private Entrenador jugador = null!;
+private Batalla batallaActual = null!;
+private List<Pokemon> pokemonesDisponibles = new List<Pokemon>();
 
-        public void BatallaController()
+        public BatallaController()
         {
             InicializarPokemones();
         }
+
         private void InicializarPokemones()
         {
             pokemonesDisponibles = new List<Pokemon>();
-            //CREACION POKEMONES PRINCIPALES    
-            var charmander = new Pokemon("Charmander", "Fuego", 100);
-            charmander.AñadirAtaque(new Ataque("Lanzallamas", "Fuego", 25));
-            charmander.AñadirAtaque(new Ataque("Arañazo", "Normal", 10));
+
+            var charmander = new Pokemon("Charmander", "Fuego", 100, new List<Ataque>());
+            charmander.AgregarAtaque(new Ataque("Lanzallamas", "Fuego", 25));
+            charmander.AgregarAtaque(new Ataque("Arañazo", "Normal", 10));
             pokemonesDisponibles.Add(charmander);
 
-            var squirtle = new Pokemon("Squirtle", "Agua", 100);
-            squirtle.AñadirAtaque(new Ataque("Pistola Agua", "Agua", 25));
-            squirtle.AñadirAtaque(new Ataque("Placaje", "Normal", 10));
+            var squirtle = new Pokemon("Squirtle", "Agua", 100, new List<Ataque>());
+            squirtle.AgregarAtaque(new Ataque("Pistola Agua", "Agua", 25));
+            squirtle.AgregarAtaque(new Ataque("Placaje", "Normal", 10));
             pokemonesDisponibles.Add(squirtle);
 
-            var bulbasaur = new Pokemon("Bulbasaur", "Planta", 100);
-            bulbasaur.AñadirAtaque(new Ataque("Látigo Cepa", "Planta", 25));
-            bulbasaur.AñadirAtaque(new Ataque("Drenaje", "Planta", 10));
+            var bulbasaur = new Pokemon("Bulbasaur", "Planta", 100, new List<Ataque>());
+            bulbasaur.AgregarAtaque(new Ataque("Látigo Cepa", "Planta", 25));
+            bulbasaur.AgregarAtaque(new Ataque("Drenaje", "Planta", 10));
             pokemonesDisponibles.Add(bulbasaur);
         }
+
         public void IniciarBatalla()
         {
             MenuView.MostrarBienvenida();
             string nombreEntrenador = MenuView.SolicitarNombreEntrenador();
             string apodoEntrenador = MenuView.SolicitarApodo();
-            jugador = new Entrenador(nombre, apodo);
+            jugador = new Entrenador(nombreEntrenador, apodoEntrenador, 3, 1, 5);
 
             MenuView.MostrarPokemonDisponibles(pokemonesDisponibles);
             int eleccion = MenuView.SolicitarSeleccionPokemon();
             jugador.PokemonActual = pokemonesDisponibles[eleccion];
 
-            // Crear un Pokémon enemigo aleatorio
+            // Crear un Pokémon enemigo aleatorio distinto al del jugador
             var enemigo = pokemonesDisponibles[new Random().Next(pokemonesDisponibles.Count)];
             while (enemigo.Nombre == jugador.PokemonActual.Nombre)
             {
@@ -51,10 +56,10 @@ namespace Pokecity.Controllers
             batallaActual = new Batalla(jugador, enemigo);
             MenuView.MostrarInicioBatalla(jugador.Nombre, jugador.PokemonActual.Nombre, enemigo.Nombre);
 
-            IniciarBatalla();
+            IniciarBatallaConEntrenador();
         }
-        private void IniciarBatallaConEntrenador()
 
+        private void IniciarBatallaConEntrenador()
         {
             while (batallaActual.BatallaEnCurso)
             {

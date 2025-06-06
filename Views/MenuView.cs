@@ -1,3 +1,6 @@
+using Pokecity.Controllers;
+using Pokecity.Models;
+
 namespace Pokecity.Views
 {
     public static class MenuView
@@ -6,7 +9,7 @@ namespace Pokecity.Views
         {
             // Mostrar mensaje de bienvenida al jugador con Ascii art
             Console.Clear();
-                // Mostrar mensaje de bienvenida al jugador con Ascii art
+            // Mostrar mensaje de bienvenida al jugador con Ascii art
             Console.Clear();
             Console.WriteLine(@"
                                             _ ____  _                           _     _           
@@ -18,17 +21,16 @@ namespace Pokecity.Views
 
         }
         public static string SolicitarNombreEntrenador()
-        {
-            // Solicitar al jugador que ingrese su nombre
-            Console.Write("Ingresa tu nombre de entrenador: ");
-            return Console.ReadLine();
-        }
+            {
+                Console.Write("Ingresa tu nombre de entrenador: ");
+                return Console.ReadLine() ?? "";
+            }
+
         public static string SolicitarApodo()
-        {
-            // Solicitar al jugador que ingrese el apodo del entrenador
-            Console.Write("Ingresa el apodo para tu entrenador: ");
-            return Console.ReadLine();
-        }
+            {
+                Console.Write("Ingresa el apodo para tu entrenador: ");
+                return Console.ReadLine() ?? "";
+            }
 
         public static void MostrarPokemonDisponibles(List<Models.Pokemon> pokemones)
         {
@@ -43,7 +45,7 @@ namespace Pokecity.Views
                 }
             }
         }
-        
+
         public static int SolicitarSeleccionPokemon()
         {
             Console.WriteLine("\n Elige tu Pokemon (1-3): ");
@@ -60,6 +62,6 @@ namespace Pokecity.Views
             Console.WriteLine($"¡Un {pokemonEnemigo} salvaje aparece!");
             Console.WriteLine("¡La batalla comienza!");
         }
-            
+
     }
 }

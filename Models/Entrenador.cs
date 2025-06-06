@@ -1,5 +1,4 @@
-using Pokecity.Models;
-namespace Pokecity
+namespace Pokecity.Models
 {
     public class Entrenador
     {
@@ -10,13 +9,14 @@ namespace Pokecity
         public int SuperPociones { get; set; }
         public int Pokebolas { get; set; }
 
-        public Entrenador(string nombre, string apodo)
+        public Entrenador(string nombre, string apodo, int pociones, int superPociones, int pokebolas)
         {
             Nombre = nombre;
             Apodo = apodo;
-            Pociones = 3;
-            SuperPociones = 1;
-            Pokebolas = 5;
+            Pociones = pociones;
+            SuperPociones = superPociones;
+            Pokebolas = pokebolas;
+            PokemonActual = null!;
         }
     }
 }

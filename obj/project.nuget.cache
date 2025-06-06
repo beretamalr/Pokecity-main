@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "pUSPV8/SrBI=",
+  "dgSpecHash": "GdqwVaJFI3I=",
   "success": true,
-  "projectFilePath": "C:\\Users\\NCAWSA\\Downloads\\Pokecity-main\\Pokecity-main.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\BMIN\\Documents\\Pokecity-main\\Pokecity-main.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\BMIN\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.16\\microsoft.netcore.app.ref.8.0.16.nupkg.sha512",
+    "C:\\Users\\BMIN\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.16\\microsoft.windowsdesktop.app.ref.8.0.16.nupkg.sha512",
+    "C:\\Users\\BMIN\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.16\\microsoft.aspnetcore.app.ref.8.0.16.nupkg.sha512",
+    "C:\\Users\\BMIN\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.16\\microsoft.netcore.app.host.win-x64.8.0.16.nupkg.sha512"
+  ],
   "logs": []
 }

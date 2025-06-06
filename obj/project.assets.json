@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\NCAWSA\\.nuget\\packages\\": {}
+    "C:\\Users\\BMIN\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\NCAWSA\\Downloads\\Pokecity-main\\Pokecity-main.csproj",
+      "projectUniqueName": "C:\\Users\\BMIN\\Documents\\Pokecity-main\\Pokecity-main.csproj",
       "projectName": "Pokecity-main",
-      "projectPath": "C:\\Users\\NCAWSA\\Downloads\\Pokecity-main\\Pokecity-main.csproj",
-      "packagesPath": "C:\\Users\\NCAWSA\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\NCAWSA\\Downloads\\Pokecity-main\\obj\\",
+      "projectPath": "C:\\Users\\BMIN\\Documents\\Pokecity-main\\Pokecity-main.csproj",
+      "packagesPath": "C:\\Users\\BMIN\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\BMIN\\Documents\\Pokecity-main\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\NCAWSA\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\BMIN\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -43,7 +43,8 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      }
+      },
+      "SdkAnalysisLevel": "9.0.200"
     },
     "frameworks": {
       "net8.0": {
@@ -59,12 +60,30 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[8.0.16, 8.0.16]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[8.0.16, 8.0.16]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[8.0.16, 8.0.16]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[8.0.16, 8.0.16]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.310/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.204/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -84,7 +84,7 @@ namespace Pokecity.Models
     {
         mensajePocion = EnemigoUsaSuperPocion();
     }
-    if (!string.IsNull0rEmpty(mensajePocion))
+    if (!string.IsNullOrEmpty(mensajePocion))
     {
         return mensajePocion;
     }
@@ -119,7 +119,7 @@ namespace Pokecity.Models
                 new Random().Next(0, 100) < 20) // 20% de probabilidad de usar poción
             {
                 int curacion = 20;
-                PokemonEnemigo.VidaActual = Match.Min(PokemonEnemigo.VidaActual + curacion, PokemonEnemigo.VidaMax);
+                PokemonEnemigo.VidaActual = Math.Min(PokemonEnemigo.VidaActual + curacion, PokemonEnemigo.VidaMax);
                 return $"{PokemonEnemigo.Nombre} ha usado una poción y ha recuperado {curacion} puntos de vida. Vida actual: {PokemonEnemigo.VidaActual}/{PokemonEnemigo.VidaMax}.";
             }
             return $"";

@@ -13,8 +13,8 @@ namespace Pokecity.Models
             Nombre = nombre;
             Tipo = tipo;
             VidaMax = vidaMax;
-            VidaActual = vidaMax; // Vida actual inicia igual que la vida máxima
-            Ataques = ataques ?? new List<Ataque>(); // Inicializa la lista de ataques si es nula
+            VidaActual = vidaMax;
+            Ataques = ataques ?? new List<Ataque>();
         }
 
         public void AgregarAtaque(Ataque ataque)
@@ -28,15 +28,5 @@ namespace Pokecity.Models
         }
     }
 
-    public class Ataque
-    {
-        public string Nombre { get; set; }
-        public int Danio { get; set; }
-
-        public Ataque(string nombre, int danio)
-        {
-            Nombre = nombre;
-            Danio = danio;
-        }
-    }
+    
 }
