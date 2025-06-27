@@ -1,5 +1,7 @@
 using Pokecity.Models;
+using System.Threading;
 using System;
+using AnsiConsole = Spectre.Console;
 
 namespace Pokecity.Views
 {
@@ -11,6 +13,8 @@ namespace Pokecity.Views
             Console.WriteLine($"Tu Pokémon: {jugador.Nombre} | Vida: {jugador.VidaActual}/{jugador.VidaMax}");
             Console.WriteLine($"Enemigo: {enemigo.Nombre} | Vida: {enemigo.VidaActual}/{enemigo.VidaMax}");
             Console.WriteLine("----------------------------\n");
+
+
         }
 
         public static int MostrarAccionesDisponibles(Entrenador jugador)
@@ -73,5 +77,19 @@ namespace Pokecity.Views
                                                                       \_\");
             Console.WriteLine("-------------------------------\n");
         }
+/*       public void cargaataque()
+        {
+            Thread ataqueThread = new Thread(() =>
+            {
+                string[] carga = { "", "", "", };
+                for (int i = 0; i < 5; i++)
+                {
+                    Console.WriteLine($"\r Cargando ataque... {carga[i % 3]}");
+                    Thread.Sleep(200);
+
+                }
+                Console.WriteLine($"\r {jugador.Nombre} uso {ataque}        ");
+            }
+        }*/
     }
 }

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Pokecity-main")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d233c9daf0a1bb1bd68d575bb6fe087724c0539e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+651aa3ff2e01430fbed276c5ffa2bfe07251226d")]
 [assembly: System.Reflection.AssemblyProductAttribute("Pokecity-main")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Pokecity-main")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,0 +1,9 @@
+*.user
+*.suo
+*.cache
+bin/
+obj/
+*.log
+.vscode/
+.vscode-test/
+Pokecity-main.sln

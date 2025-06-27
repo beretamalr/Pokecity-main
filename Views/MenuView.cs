@@ -21,16 +21,22 @@ namespace Pokecity.Views
 
         }
         public static string SolicitarNombreEntrenador()
-            {
-                Console.Write("Ingresa tu nombre de entrenador: ");
-                return Console.ReadLine() ?? "";
-            }
-
+        {
+            Console.Write("Ingresa tu nombre de entrenador: ");
+            return Console.ReadLine() ?? "";
+        }
+        public static void LimpiarPantalla()
+        {
+            
+            Console.WriteLine("Presiona cualquier tecla para continuar...");
+            Console.ReadKey();
+            Console.Clear();
+        }
         public static string SolicitarApodo()
-            {
-                Console.Write("Ingresa el apodo para tu entrenador: ");
-                return Console.ReadLine() ?? "";
-            }
+        {
+            Console.Write("Ingresa el apodo para tu entrenador: ");
+            return Console.ReadLine() ?? "";
+        }
 
         public static void MostrarPokemonDisponibles(List<Models.Pokemon> pokemones)
         {
@@ -62,6 +68,5 @@ namespace Pokecity.Views
             Console.WriteLine($"¡Un {pokemonEnemigo} salvaje aparece!");
             Console.WriteLine("¡La batalla comienza!");
         }
-
     }
 }

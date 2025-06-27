@@ -40,7 +40,9 @@ private List<Pokemon> pokemonesDisponibles = new List<Pokemon>();
         {
             MenuView.MostrarBienvenida();
             string nombreEntrenador = MenuView.SolicitarNombreEntrenador();
+            MenuView.LimpiarPantalla();
             string apodoEntrenador = MenuView.SolicitarApodo();
+            MenuView.LimpiarPantalla();
             jugador = new Entrenador(nombreEntrenador, apodoEntrenador, 3, 1, 5);
 
             MenuView.MostrarPokemonDisponibles(pokemonesDisponibles);
