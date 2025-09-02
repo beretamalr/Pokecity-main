@@ -50,5 +50,3 @@ ESTRUCTURA PROYECTO
     -----Controllers/   <> Logica
     -----Program/       <> Punto de entrada (MAIN)
     -----README.md      <> Este archivo
-
-    https://emojicombos.com/pokemon Link de ascii
